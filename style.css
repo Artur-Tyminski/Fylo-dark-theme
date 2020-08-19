@@ -1,0 +1,68 @@
+/*     
+font-family: 'Open Sans', sans-serif;
+
+font-family: 'Raleway', sans-serif;
+ */
+
+
+.page {
+    background: hsl(218, 28%, 13%);
+    margin: 0;
+    padding: ;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/*---------------------
+TYPOGRAPHY
+----------------------*/
+
+.basic__typo {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+/*---------------------
+COMPONENTS GEOMETRY
+----------------------*/
+
+/*---------------------
+HEADER
+----------------------*/
+
+.header {
+    padding: 2em 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.header__logo {
+    width: 8rem;
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__item {
+    list-style: none;
+    padding: 0;
+    margin-left: 3vw;
+}
+
+.header__link {
+    text-decoration: none;
+    color: inherit;
+}
