@@ -1,4 +1,5 @@
-/* 
+# Front-end Style Guide
+
 ## Layout
 
 The designs were created to the following widths:
@@ -17,7 +18,7 @@ The designs were created to the following widths:
 
 ### Accent
 
-- Cyan (inside call-to-action gradient):    
+- Cyan (inside call-to-action gradient): hsl(176, 68%, 64%)
 - Blue (inside call-to-action gradient): hsl(198, 60%, 50%)
 
 ### Neutral
@@ -38,4 +39,12 @@ The designs were created to the following widths:
 ### Body
 
 - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- Weights: 400, 700 */
+- Weights: 400, 700
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)

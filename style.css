@@ -8,7 +8,6 @@ font-family: 'Raleway', sans-serif;
 .page {
     background: hsl(218, 28%, 13%);
     margin: 0;
-    padding: ;
 }
 
 .container {
@@ -26,15 +25,35 @@ img {
 TYPOGRAPHY
 ----------------------*/
 
-.basic__typo {
+.special-typo {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.938);
+}
+
+.body-typo {
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    font-size: 0.875rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.938);
+    line-height: 1.6em;
 }
 
 /*---------------------
 COMPONENTS GEOMETRY
 ----------------------*/
+
+.page__header {
+    margin-bottom: 4em;
+}
+
+.main__intro {
+    margin-bottom: 8em;
+}
+
+.intro__btn {
+    margin: 2em auto 0;
+    display: block;
+
+}
 
 /*---------------------
 HEADER
@@ -45,7 +64,7 @@ HEADER
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .header__logo {
@@ -54,6 +73,7 @@ HEADER
 
 .header__list {
     display: flex;
+    margin: 0;
 }
 
 .header__item {
@@ -63,6 +83,46 @@ HEADER
 }
 
 .header__link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
     text-decoration: none;
     color: inherit;
+    transition: color 100ms ease-in-out;
+}
+
+.header__link:hover,
+.header__link:focus {
+    color: hsl(176, 68%, 64%);
+}
+
+/*---------------------
+INTRO
+----------------------*/
+
+.intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.intro__title {
+    font-size: 1.8rem;
+    line-height: 1.6em;
+}
+
+.intro__body {}
+
+/*---------------------
+btn
+----------------------*/
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 1.25em 6em;
+    background: rgb(101, 226, 217);
+    background: linear-gradient(90deg, rgba(101, 226, 217, 1) 0%, rgba(51, 158, 204, 1) 100%);
+    border-radius: 5em;
+    max-width: 7em;
 }
