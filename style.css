@@ -27,14 +27,18 @@ TYPOGRAPHY
 
 .special-typo {
     font-family: 'Raleway', sans-serif;
-    color: rgba(255, 255, 255, 0.938);
+    color: rgba(255, 255, 255, 0.904);
 }
 
 .body-typo {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.938);
+    color: rgba(255, 255, 255, 0.904);
     line-height: 1.6em;
+}
+
+.cite-text {
+    font-style: normal;
+    display: block;
 }
 
 /*---------------------
@@ -60,6 +64,10 @@ COMPONENTS GEOMETRY
 
 .main__know-more {
     margin-bottom: 10em;
+}
+
+.main__testimony {
+    margin: 0 auto 10em;
 }
 
 /*---------------------
@@ -212,7 +220,7 @@ KONOW MORE
     bottom: -.12em;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 500ms ease-in;
+    transition: transform 500ms cubic-bezier(.45, .05, .55, .95);
 }
 
 .know-more__link:hover::before {
@@ -223,3 +231,58 @@ KONOW MORE
 /*---------------------
 TESTIMONY
 ----------------------*/
+
+.testimony {
+    position: relative;
+    /* border: 1px solid red; */
+    width: 80%;
+
+}
+
+.testimony::before {
+    content: '';
+    background-image: url(images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.testimony__quote {
+    background: #21293c;
+    padding: 2em;
+    border-radius: .3em;
+    margin: 0 0 2em;
+}
+
+.testimony__body {
+    font-size: .9rem;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.testimony__details {
+    display: flex;
+    align-items: center;
+}
+
+.testimony__img {
+    width: 2em;
+    clip-path: circle(50% at 50% 50%);
+    margin-right: .5em;
+}
+
+.testimony__author {
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.testimony__position {
+    font-size: .7em;
+    margin-top: -.5em;
+}
+
