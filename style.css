@@ -68,7 +68,12 @@ COMPONENTS GEOMETRY
 }
 
 .main__testimony {
-    margin: 0 auto 10em;
+    margin: 0 auto -4em;
+}
+
+.main__get-started {
+    position: relative;
+    top: 12rem;
 }
 
 /*---------------------
@@ -328,4 +333,73 @@ FOOTER
 
 .footer {
     background: #0c1524;
+    padding-top: 16rem;
+    padding-bottom: 4em;
+}
+
+.footer__logo {
+    margin-bottom: 4em;
+}
+
+.footer__details {
+    display: flex;
+    align-items: center;
+}
+
+.image-svg {
+    min-width: 20px;
+    max-width: 35px;
+    margin-right: 1em;
+    fill: #fff;
+    transition: fill 100ms ease-in-out;
+}
+
+.image-svg:hover {
+    fill: hsl(176, 68%, 64%);
+}
+
+.image-svg--position {
+    align-self: flex-start;
+    transform: translateY(.3em);
+}
+
+.footer__addr-txt {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+.footer__detials-container {
+    margin-bottom: 6em;
+}
+
+.footer__nav {
+    margin-bottom: 4em;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__item {
+    margin-bottom: 1em;
+}
+
+.footer__link {
+    font-size: 1.2rem;
+    color: inherit;
+    text-decoration: none;
+    transition: color 100ms ease-in-out;
+}
+
+.footer__link:hover {
+    color: hsl(176, 68%, 64%);
+}
+
+/* dodać oddzielną klase na ustawienia linków; dodac focus do laczy */
+
+.social {
+    display: flex;
+    justify-content: center;
 }
