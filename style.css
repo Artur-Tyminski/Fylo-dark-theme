@@ -13,6 +13,7 @@ font-family: 'Raleway', sans-serif;
 .container {
     width: 90%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 img {
@@ -136,7 +137,7 @@ BTN
     text-decoration: none;
     color: #fff;
     font-weight: 700;
-    padding: 1.25em 6em;
+    padding: 1.25rem;
     background: rgb(101, 226, 217);
     background: linear-gradient(90deg, rgba(101, 226, 217, 1) 0%, rgba(51, 158, 204, 1) 100%);
     border-radius: 5em;
@@ -286,3 +287,45 @@ TESTIMONY
     margin-top: -.5em;
 }
 
+/*---------------------
+GET STARTED
+----------------------*/
+
+.get-started {
+    background: #1c2230;
+    padding: 2em;
+    text-align: center;
+    border-radius: .5em;
+}
+
+.get-started__headline {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__email {
+    padding: 1.25rem;
+    border-radius: 5em;
+    border: none;
+    margin-bottom: 1em;
+}
+
+.btn--secondary {
+    font-size: .875rem;
+    max-width: 100%;
+    border: none;
+}
+
+
+/*---------------------
+FOOTER
+----------------------*/
+
+.footer {
+    background: #0c1524;
+}
