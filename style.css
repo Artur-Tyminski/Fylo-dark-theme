@@ -4,9 +4,8 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Raleway', sans-serif;
  */
 
-
 .page {
-    background: hsl(218, 28%, 13%);
+    /* background: hsl(218, 28%, 13%); */
     margin: 0;
 }
 
@@ -16,11 +15,21 @@ font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 
+/*---------------------
+GENERAL
+----------------------*/
+
+.hover-link:hover,
+.hover-link:focus {
+    color: hsl(176, 68%, 64%);
+    fill: hsl(176, 68%, 64%);
+    outline: none;
+}
+
 img {
     display: block;
     max-width: 100%;
 }
-
 
 /*---------------------
 GENERAL TYPOGRAPHY
@@ -47,14 +56,14 @@ COMPONENTS GEOMETRY
 ----------------------*/
 
 .page__header {
-    margin-bottom: 4em;
+    margin-bottom: 10em;
 }
 
 .main__intro {
     margin-bottom: 8em;
 }
 
-.intro__btn {
+.hero__btn {
     margin: 2em auto 0;
     display: block;
 }
@@ -73,7 +82,31 @@ COMPONENTS GEOMETRY
 
 .main__get-started {
     position: relative;
-    top: 12rem;
+    top: 9rem;
+}
+
+/*---------------------
+BTN
+----------------------*/
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 1.25rem;
+    background: rgb(101, 226, 217);
+    background: linear-gradient(90deg, rgba(101, 226, 217, 1) 0%, rgba(51, 158, 204, 1) 100%);
+    border-radius: 5em;
+    max-width: 7em;
+    min-width: 15em;
+    box-shadow: 0 1px 5px rgba(37, 37, 37, 0.562);
+    position: relative;
+    transition: color 100ms linear;
+}
+
+.btn:hover {
+    color: #181f2a;
+    cursor: pointer;
 }
 
 /*---------------------
@@ -82,10 +115,21 @@ HEADER
 
 .header {
     padding: 2em 0 0;
+    background-color: #1b2330;
+    /* position: relative;
+    z-index: -100; */
+    background: #1b2330 url(images/bg-curvy-mobile.svg) no-repeat center bottom;
+    background-size: 100%;
+}
+
+.header__inner {
+    margin-bottom: 4em;
+}
+
+.header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid red; */
 }
 
 .header__logo {
@@ -112,45 +156,33 @@ HEADER
     transition: color 100ms ease-in-out;
 }
 
-.header__link:hover,
-.header__link:focus {
-    color: hsl(176, 68%, 64%);
-}
-
 /*---------------------
-INTRO
+hero
 ----------------------*/
 
-.intro {
+.hero {
     text-align: center;
     display: flex;
     flex-direction: column-reverse;
 }
 
-.intro__title {
+.hero__title {
     font-size: 1.8rem;
     line-height: 1.6em;
 }
 
-.intro__body {}
+.hero__img {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 /*---------------------
-BTN
+PAGE
 ----------------------*/
 
-.btn {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    padding: 1.25rem;
-    background: rgb(101, 226, 217);
-    background: linear-gradient(90deg, rgba(101, 226, 217, 1) 0%, rgba(51, 158, 204, 1) 100%);
-    border-radius: 5em;
-    max-width: 7em;
-    min-width: 15em;
-    box-shadow: 0 1px 5px rgba(37, 37, 37, 0.562);
-    transition: 150ms;
-    position: relative;
+.page {
+    background-color: #181f2b
 }
 
 /*---------------------
@@ -193,20 +225,17 @@ KONOW MORE
 
 .know-more__link {
     text-decoration: none;
-    color: hsl(176, 68%, 64%);
+    color: hsla(176, 44%, 64%, 0.863);
     padding-bottom: .4rem;
     position: relative;
     transition: color 500ms ease-in-out;
+
 }
 
 .know-more__link-img {
     display: inline-block;
-    width: 20px;
+    width: 1rem;
     vertical-align: middle;
-}
-
-.know-more__link:hover {
-    color: #8affe6;
 }
 
 .know-more__link::after {
@@ -233,7 +262,8 @@ KONOW MORE
     transition: transform 500ms cubic-bezier(.45, .05, .55, .95);
 }
 
-.know-more__link:hover::before {
+.know-more__link:hover::before,
+.know-more__link:focus::before {
     transform: scale(1);
     transform-origin: left;
 }
@@ -244,9 +274,7 @@ TESTIMONY
 
 .testimony {
     position: relative;
-    /* border: 1px solid red; */
     width: 80%;
-
 }
 
 .testimony::before {
@@ -267,6 +295,7 @@ TESTIMONY
     padding: 2em;
     border-radius: .3em;
     margin: 0 0 2em;
+    box-shadow: 0 1px 5px rgba(37, 37, 37, 0.562);
 }
 
 .testimony__body {
@@ -305,6 +334,8 @@ GET STARTED
     padding: 2em;
     text-align: center;
     border-radius: .5em;
+    max-width: 60rem;
+    box-shadow: 5px 5px 5px rgba(10, 10, 10, 0.473);
 }
 
 .get-started__headline {
@@ -321,7 +352,7 @@ GET STARTED
     padding: 1.25rem;
     border-radius: 5em;
     border: none;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .btn--secondary {
@@ -369,10 +400,6 @@ FOOTER
     transition: fill 100ms ease-in-out;
 }
 
-.image-svg:hover {
-    fill: hsl(176, 68%, 64%);
-}
-
 .image-svg--position {
     align-self: flex-start;
     transform: translateY(.3em);
@@ -402,13 +429,8 @@ FOOTER
     transition: color 100ms ease-in-out;
 }
 
-.footer__link:hover {
-    color: hsl(176, 68%, 64%);
-}
-
-/* dodać oddzielną klase na ustawienia linków; dodac focus do laczy */
-
 .social {
     display: flex;
     justify-content: center;
 }
+

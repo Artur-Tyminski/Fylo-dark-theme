@@ -17,17 +17,32 @@
     HEADER
 ------------->
 
-    <header class="header page__header container">
-        <a href="#">
-            <img class="header__logo" src="images/logo.svg" alt="Fylo-logo">
-        </a>
-        <nav class="header__nav special-typo">
-            <ul class="header__list">
-                <li class="header__item"><a class="header__link" href="#">Features</a></li>
-                <li class="header__item"><a class="header__link" href="#">Team</a></li>
-                <li class="header__item"><a class="header__link" href="#">Sign In</a></li>
-            </ul>
-        </nav>
+    <header class="header page__header">
+        <div class="header__inner container">
+            <a href="#">
+                <img class="header__logo" src="images/logo.svg" alt="Fylo-logo">
+            </a>
+            <nav class="special-typo">
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__link hover-link" href="#">Features</a></li>
+                    <li class="header__item"><a class="header__link hover-link" href="#">Team</a></li>
+                    <li class="header__item"><a class="header__link hover-link" href="#">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="hero main__hero container">
+            <div>
+                <h1 class="hero__title special-typo">All your files in one secure location, accessible anywhere.</h1>
+                <p class="body-typo">Fylo stores all your most important files in one secure location.
+                    Access them
+                    wherever
+                    you need, share and collaborate with friends family, and co-workers.</p>
+                <a class="btn hero__btn special-typo" href="#">Get Started</a>
+            </div>
+            <img class="hero__img" src="images/illustration-intro.png" alt="">
+        </section>
+
     </header>
 
     <!----------- 
@@ -35,22 +50,6 @@
 ------------->
 
     <main class="main">
-
-        <!----------- 
-    intro
-------------->
-
-        <section class="intro main__intro container">
-            <div class="container-inner">
-                <h1 class="intro__title special-typo">All your files in one secure location, accessible anywhere.</h1>
-                <p class="intro__body body-typo">Fylo stores all your most important files in one secure location.
-                    Access them
-                    wherever
-                    you need, share and collaborate with friends family, and co-workers.</p>
-                <a class="btn intro__btn special-typo" href="#">Get Started</a>
-            </div>
-            <img class="intro__img img" src="images/illustration-intro.png" alt="">
-        </section>
 
         <!----------- 
     benefits 
@@ -118,8 +117,8 @@
                     colleagues for live
                     collaboration. No email
                     attachments required.</p>
-                <a class="know-more__link body-typo" href="#">See how Fylo works <img class="know-more__link-img"
-                        src="images/icon-arrow.svg" alt=""></a>
+                <a class="know-more__link hover-link body-typo" href="#">See how Fylo works <img
+                        class="know-more__link-img" src="images/icon-arrow.svg" alt=""></a>
             </div>
             <img class="know-more__img img" src="images/illustration-stay-productive.png" alt="">
         </section>
@@ -168,7 +167,7 @@
         </section>
 
         <!----------- 
-    get-    started 
+    get-started 
 ------------->
 
         <section class="get-started main__get-started container">
@@ -230,28 +229,28 @@
                 </div>
                 <div class="footer__nav footer__col body-typo">
                     <ul class="footer__list">
-                        <li class="footer__item"><a class="footer__link" href="#">About Us</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#">Jobs</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#">Press</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#">Blog</a></li>
+                        <li class="footer__item"><a class="footer__link hover-link" href="#">About Us</a></li>
+                        <li class="footer__item"><a class="footer__link hover-link" href="#">Jobs</a></li>
+                        <li class="footer__item"><a class="footer__link hover-link" href="#">Press</a></li>
+                        <li class="footer__item"><a class="footer__link hover-link" href="#">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer__nav footer__col body-typo">
                     <ul class="footer__list">
-                        <li class="footer__item"><a class="footer__link" href="">Contact Us</a></li>
-                        <li class="footer__item"><a class="footer__link" href="">Terms</a></li>
-                        <li class="footer__item"><a class="footer__link" href="">Privacy</a></li>
+                        <li class="footer__item"><a class="footer__link hover-link" href="">Contact Us</a></li>
+                        <li class="footer__item"><a class="footer__link hover-link" href="">Terms</a></li>
+                        <li class="footer__item"><a class="footer__link hover-link" href="">Privacy</a></li>
                     </ul>
                 </div>
                 <div class="social footer__social footer__col">
-                    <a href="#"><svg class="image-svg" version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                            style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                    <a href="#"><svg class="image-svg hover-link" version="1.1" id="Warstwa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
                             <path d="M12,1.1C18,1.1,22.9,6,22.9,12S18,22.9,12,22.9S1.1,18,1.1,12S6,1.1,12,1.1z M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12
                    s12-5.4,12-12S18.6,0,12,0z M10,10H8v2h2v6h3v-6h1.8l0.2-2h-2V9.2c0-0.5,0.1-0.7,0.6-0.7H15V6h-2.4C10.8,6,10,6.8,10,8.3
                    C10,8.3,10,10,10,10z" />
                         </svg></a>
-                    <a class="social__link" href="#"><svg class="image-svg" version="1.1" id="Warstwa_2"
+                    <a class="social__link" href="#"><svg class="image-svg hover-link" version="1.1" id="Warstwa_2"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                             y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
                             <g>
@@ -262,9 +261,9 @@
                        c4.6,0,7.2-3.9,7-7.3C17.8,9.7,18.2,9.3,18.5,8.8z" />
                             </g>
                         </svg></a>
-                    <a href="#"><svg class="image-svg" version="1.1" id="Warstwa_2" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                            style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                    <a href="#"><svg class="image-svg hover-link" version="1.1" id="Warstwa_2"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
                             <g>
                                 <path
                                     d="M12,1.1C18,1.1,22.9,6,22.9,12S18,22.9,12,22.9S1.1,18,1.1,12S6,1.1,12,1.1z M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12
