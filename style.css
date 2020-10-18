@@ -10,6 +10,7 @@ GENERAL
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 img {
@@ -29,9 +30,10 @@ img {
 }
 
 .image-svg {
-    fill: #fff;
-    margin-right: 1em;
-    width: 1.85rem;
+    fill: #ffffff;
+    min-width: 1.25em;
+    width: 1.25em;
+    margin-right: 0.875em;
     transition: fill 100ms ease-in-out;
 }
 
@@ -40,9 +42,23 @@ img {
     transform: translateY(.3em);
 }
 
+.img-svg-margin {
+    margin-right: 0.875em;
+}
+
+.social-svg {
+    fill: #ffffff;
+    transition: fill 100ms ease-in-out;
+    width: 2rem;
+}
+
 /*---------------------
 GENERAL TYPOGRAPHY
 ----------------------*/
+
+.page__header {
+    margin-bottom: 8em;
+}
 
 .body-typo {
     font-family: 'Open Sans', sans-serif;
@@ -72,10 +88,6 @@ GENERAL TYPOGRAPHY
 COMPONENTS GEOMETRY/POSITION
 ----------------------*/
 
-.page__header {
-    margin-bottom: 10em;
-}
-
 .header__btn {
     margin: 0 auto;
 }
@@ -89,15 +101,15 @@ COMPONENTS GEOMETRY/POSITION
 }
 
 .main__testimony {
-    margin: 0 auto -4em;
+    margin: 0 auto;
 }
 
 .main__form {
-    margin: 0 a;
+    margin: 0 auto;
+    margin-top: -4em;
     position: relative;
     top: 12em;
 }
-
 
 /*---------------------
 BTN
@@ -113,18 +125,18 @@ BTN
     font-weight: 700;
     max-width: 7em;
     min-width: 15em;
-    padding: 1.25em;
+    padding: calc(1em - 1px);
     position: relative;
     text-decoration: none;
-    transition: color 50ms ease-in-out, background-color 125ms ease-in-out;
+    transition: background-color 125ms cubic-bezier(0, .78, 0, .78);
     z-index: 2;
+    border: 1px solid rgb(59, 214, 204);
 }
 
 .btn:hover,
 .btn:focus {
-    color: #181f2a;
     cursor: pointer;
-    background: rgb(0, 255, 238);
+    background: transparent;
 }
 
 /*---------------------
@@ -139,6 +151,7 @@ FORM-email
     box-shadow: 5px 5px 5px rgba(10, 10, 10, 0.473);
     padding: 3em 2em;
     text-align: center;
+    max-width: 27em;
 }
 
 .form__headline {
@@ -154,21 +167,26 @@ FORM-email
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    max-width: 22.5em;
 }
 
 .form__email {
     border: none;
     border-radius: 5em;
     box-sizing: border-box;
-    margin-bottom: 2rem;
-    padding: 1.506rem;
-    /* min-height: 5.265em; */
+    margin-bottom: 1.5em;
+    padding: 0 1.506em;
+    font-size: .875rem;
+    height: 3.75em;
 }
 
 .form__btn {
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: .875rem;
     max-width: 100%;
+    height: 3.75em;
 }
 
 /*---------------------
@@ -245,7 +263,7 @@ hero
 
 .header__img {
     margin: 0 auto;
-    max-width: 43.75rem;
+    max-width: 33.375rem;
     width: 100%;
 }
 
@@ -261,11 +279,11 @@ BENEFITS
 
 .benefits__card {
     margin-bottom: 6em;
-    max-width: 21em;
-    min-width: 100%;
+    width: 90%;
+    max-width: 25em;
+
+
 }
-
-
 
 .benefits__title {
     font-size: 1.3rem;
@@ -284,6 +302,10 @@ LEARN
 .learn {
     display: flex;
     flex-direction: column-reverse;
+}
+
+.learn__body {
+    max-width: 700px;
 }
 
 .learn__link {
@@ -331,8 +353,8 @@ LEARN
 }
 
 .learn__img {
-    margin: 0 auto 2em;
-    max-width: 34.375rem;
+    margin: 0 auto 4em;
+    max-width: 33.375rem;
     width: 100%;
 }
 
@@ -408,7 +430,8 @@ FOOTER
 
 .footer {
     background: #0c1524;
-    padding: 16em 0 3em;
+    padding: 18em 0 3em;
+    /* font-size: 1.1rem; */
 }
 
 .footer__logo {
@@ -417,7 +440,7 @@ FOOTER
 }
 
 .footer__details {
-    align-items: center;
+    align-items: flex-end;
     display: flex;
     margin: 0 0 1.5em;
 }
@@ -434,6 +457,7 @@ FOOTER
 
 .footer__detials-container {
     margin-bottom: 6em;
+    transform: translateY(.25em);
 }
 
 .footer__nav {
@@ -446,7 +470,7 @@ FOOTER
 }
 
 .footer__item {
-    margin-bottom: 1em;
+    margin-bottom: 1.6em;
 }
 
 .footer__link {
@@ -460,27 +484,47 @@ FOOTER
     justify-content: center;
 }
 
+.social-mg {
+    margin: 0 1em;
+}
+
 @media (min-width: 650px) {
 
     html {
         font-size: 18px;
     }
+
+    .form__container {
+        max-width: 20em;
+    }
+
+    .footer {
+        padding: 16em 0 3em;
+    }
 }
 
 @media (min-width: 850px) {
+
+    .image-svg {
+        margin-right: 21px;
+    }
+
+    .img-svg-margin {
+        margin-right: 14px;
+    }
 
     /* geometry/position */
 
     .main__form {
         position: relative;
-        top: 9em;
+        top: 8em;
     }
 
     /* form */
 
     .form {
-        max-width: 61.111rem !important;
-        padding: 3em 4em
+        max-width: 55rem !important;
+        padding: 2.5em 4em;
     }
 
     .form__body {
@@ -497,7 +541,7 @@ FOOTER
 
     .form__email {
         border-radius: 5em;
-        margin: 0 1.5% 0 0;
+        margin: 0 2.5% 0 0;
         width: 100%;
     }
 
@@ -509,15 +553,18 @@ FOOTER
     /* benefits */
 
     .benefits {
-        align-items: baseline;
+        align-items: center;
         column-gap: 10%;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(16em, 27em) minmax(16em, 27em);
         justify-content: space-between;
-        max-width: 61.111rem !important;
+        max-width: 55rem !important;
     }
 
     /* footer */
 
+    .footer {
+        padding: 14em 0 3em;
+    }
 
     .footer__container {
         align-items: baseline;
@@ -537,10 +584,6 @@ FOOTER
         max-width: 18.75rem;
     }
 
-    .image-svg {
-        margin-right: 0;
-    }
-
     .footer__nav-container {
         display: flex;
         margin-right: 1vw;
@@ -558,10 +601,6 @@ FOOTER
         display: flex;
         min-width: 110px;
     }
-
-    .social-mg {
-        margin: 0 1em;
-    }
 }
 
 @media (min-width: 1250px) {
@@ -576,6 +615,11 @@ FOOTER
         margin-bottom: -5rem;
     }
 
+    .footer__social {
+        transform: translateY(.7rem);
+        justify-content: right;
+    }
+
     /* header */
 
     .header {
@@ -583,6 +627,10 @@ FOOTER
     }
 
     /* learn */
+
+    .learn__headline {
+        font-size: 2rem;
+    }
 
     .learn {
         align-items: center;
@@ -592,11 +640,7 @@ FOOTER
     }
 
     .learn__img {
-        margin: 0 3em 0 2em;
-    }
-
-    .learn__headline {
-        font-size: 2rem;
+        margin: 0 4em 0 2em;
     }
 
     /* testimony */
@@ -617,6 +661,7 @@ FOOTER
 
     .testimony__quote {
         margin: 0 1em;
+        max-width: 100%;
     }
 
     /* footer */
@@ -636,16 +681,20 @@ FOOTER
         margin-bottom: 0;
     }
 
-    .social {
-        transform: translateY(1rem);
-        justify-content: right;
+
+}
+
+@media (min-width: 1920px) {
+
+    html {
+        font-size: 25px;
     }
 }
 
 @media (min-width: 2560px) {
 
     html {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     /* geometry/position */
@@ -662,10 +711,14 @@ FOOTER
 
 }
 
-@media (min-width: 3840px) {
+@media (min-width: 3839px) {
 
     html {
-        font-size: 26px;
+        font-size: 46px;
+    }
+
+    .container {
+        max-width: 79em;
     }
 
     /* geometry/position */
