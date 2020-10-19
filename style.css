@@ -119,7 +119,7 @@ BTN
     background: linear-gradient(90deg, rgba(101, 226, 217, 1) 0%, rgba(51, 158, 204, 1) 100%);
     background: rgb(59, 214, 204);
     border-radius: 5em;
-    box-shadow: 0 1px 5px rgba(37, 37, 37, 0.562);
+    box-shadow: 0 2px 5px rgba(7, 7, 7, 0.685);
     color: #fff;
     display: block;
     font-weight: 700;
@@ -128,7 +128,7 @@ BTN
     padding: calc(1em - 1px);
     position: relative;
     text-decoration: none;
-    transition: background-color 125ms cubic-bezier(0, .78, 0, .78);
+    transition: background-color 125ms cubic-bezier(0, .78, 0, .78), box-shadow 225ms cubic-bezier(0, .78, 0, .78);
     z-index: 2;
     border: 1px solid rgb(59, 214, 204);
 }
@@ -137,6 +137,7 @@ BTN
 .btn:focus {
     cursor: pointer;
     background: transparent;
+    box-shadow: 0 0px 30px rgba(14, 12, 12, 0.651);
 }
 
 /*---------------------
@@ -148,7 +149,7 @@ FORM-email
 .form {
     background: #1c2230;
     border-radius: .5em;
-    box-shadow: 5px 5px 5px rgba(10, 10, 10, 0.473);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.11);
     padding: 3em 2em;
     text-align: center;
     max-width: 27em;
@@ -279,10 +280,7 @@ BENEFITS
 
 .benefits__card {
     margin-bottom: 6em;
-    width: 90%;
     max-width: 25em;
-
-
 }
 
 .benefits__title {
@@ -293,6 +291,8 @@ BENEFITS
 .benefits__img {
     display: inline-block;
     margin-bottom: 1em;
+    width: 100%;
+    max-width: 7rem;
 }
 
 /*---------------------
@@ -305,7 +305,7 @@ LEARN
 }
 
 .learn__body {
-    max-width: 700px;
+    max-width: 43.75em;
 }
 
 .learn__link {
@@ -364,7 +364,7 @@ TESTIMONY
 
 .testimony {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 37.5em;
     position: relative;
     width: 80%;
 }
@@ -376,7 +376,7 @@ TESTIMONY
     display: block;
     height: 30px;
     left: 5px;
-    max-width: 700px;
+    max-width: 43.75em;
     position: absolute;
     top: -25px;
     width: 30px;
@@ -385,9 +385,9 @@ TESTIMONY
 .testimony__quote {
     background: #21293c;
     border-radius: .3em;
-    box-shadow: 0 1px 5px rgba(37, 37, 37, 0.562);
+    box-shadow: 5px 5px 5px rgba(27, 27, 27, 0.116);
     margin: 0 auto 2em;
-    max-width: 700px;
+    max-width: 43.75em;
     padding: 2em;
 }
 
@@ -553,7 +553,7 @@ FOOTER
     /* benefits */
 
     .benefits {
-        align-items: center;
+        align-items: baseline;
         column-gap: 10%;
         grid-template-columns: minmax(16em, 27em) minmax(16em, 27em);
         justify-content: space-between;
@@ -599,7 +599,7 @@ FOOTER
 
     .social {
         display: flex;
-        min-width: 110px;
+        min-width: 6.1em;
     }
 }
 
@@ -618,6 +618,10 @@ FOOTER
     .footer__social {
         transform: translateY(.7rem);
         justify-content: right;
+    }
+
+    .main__form {
+        margin-top: 4em;
     }
 
     /* header */
