@@ -590,7 +590,7 @@ FOOTER
 
     .position-transform,
     .phone-transform {
-        transform: translateY(.5em);
+        transform: translateY(.45em);
     }
 
     .email-transform {
